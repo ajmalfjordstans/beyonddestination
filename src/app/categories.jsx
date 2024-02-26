@@ -266,8 +266,8 @@ export default function Categories() {
           .filter(pkg => pkg.category === activeTab)
           .map((data, id) => {
             return (
-              <div className="content">
-                <Card data={data} key={id} />
+              <div className="content"  key={id}>
+                <Card data={data} />
               </div>
             )
           })}
