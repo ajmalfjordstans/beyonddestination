@@ -24,7 +24,7 @@ export function Card({ img, description, destination }) {
 
 export default function WineTasting() {
   return (
-    <div className='bg-[black] text-[#FFA500] relative h-[600px] bg-winebanner bg-cover'>
+    <div className='bg-[black] text-[#FFA500] h-[600px] bg-winebanner bg-cover mt-[30px]'>
       <div className='container mx-auto py-[80px] px-[5%] md:px-[10%] z-10 text-white grid grid-cols-2 '>
         <div></div>
         <div>

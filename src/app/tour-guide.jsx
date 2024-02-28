@@ -94,23 +94,43 @@ const guides = [
 
 export default function TourGuide() {
   return (
-    <div className='container mx-auto py-[30px] px-[5%] md:px-[10%]'>
-      <div>
-        <p className='font-[500] text-[28px]'>Tour Guides</p>
-        <p className='font-[400] text-[18px] text-[gray]'>Desc about our tour guides</p>
+    <>
+
+      <div className='container mx-auto py-[30px] px-[5%] md:px-[10%]'>
+        <div>
+          <p className='font-[500] text-[28px]'>Tour Guides</p>
+          <p className='font-[400] text-[18px] text-[gray]'>Desc about our tour guides</p>
+        </div>
+        <div className='mt-[40px] flex justify-around md:px-[7%]'>
+          {guides.map((guide, id) => {
+            return (
+              <Card data={guide} key={id} />
+            )
+          })}
+        </div>
+        <div className='mt-[30px] w-full flex justify-center flex-wrap'>
+          <Button
+            className='bg-primary px-[10px] py-[5px] rounded-md font-lato mt-[10px]'
+          >View More Guides</Button>
+        </div>
+
       </div>
-      <div className='mt-[40px] flex justify-around md:px-[7%]'>
-        {guides.map((guide, id) => {
-          return (
-            <Card data={guide} key={id} />
-          )
-        })}
+      <div className='w-[70%] h-[350px] mx-auto rounded-md bg-[#722F37] shadow-xl grid grid-cols-2 relative'>
+        <div className='p-[30px] text-white'>
+          <p className='font-[500] text-[28px]'>Register as a <br /> Tour Guide with us</p>
+          <p className='font-[300] text-[16px] mt-[30px]'>Benefits of joining as a tour guide</p>
+          <Button
+            className='bg-[#FFA500] text-[#722F37] px-[10px] py-[3px] mt-[25px] rounded-md flex gap-2 items-center'
+          >Register Now
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#722F37" className="w-6 h-6">
+              <path fillRule="evenodd" d="M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06Z" clipRule="evenodd" />
+            </svg>
+          </Button>
+        </div>
+        <div className='bg-guidebanner bg-cover'>
+        </div>
       </div>
-      <div className='mt-[30px] w-full flex justify-center flex-wrap'>
-        <Button
-          className='bg-primary px-[10px] py-[5px] rounded-md font-lato mt-[10px]'
-        >View More Guides</Button>
-      </div>
-    </div>
+      {/* <div className='absolute h-[50%] w-full bg-[#FFA500]'></div> */}
+    </>
   )
 }

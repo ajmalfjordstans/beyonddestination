@@ -1,0 +1,99 @@
+{
+  "destinations": {
+    "name": "destination",
+    "places": [
+      {
+        "name": "Europe",
+        "places": [
+          {
+            "name": "Austria",
+            "places": [
+              {
+                "name": "Vienna"
+              }
+            ]
+          },
+          {
+            "name": "Balearic Islands",
+            "places": [
+              {
+                "name": "Ibiza",
+                "places": [
+                  {
+                    "name": "Es Cana"
+                  },
+                  {
+                    "name": "Ibiza Town"
+                  },
+                  {
+                    "name": "San Antonio"
+                  },
+                  {
+                    "name": "San Antonio Bay"
+                  },
+                  {
+                    "name": "Santa Eulalia"
+                  }
+                ]
+              },
+              {
+                "name": "Majorca",
+                "places": [
+                  {
+                    "name": "Alcudia"
+                  },
+                  {
+                    "name": "Cala Bona"
+                  },
+                  {
+                    "name": "Cala Dor"
+                  }
+                ]
+              },
+              {
+                "name": "Menorca"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Asia",
+        "places": [
+          {
+            "name": "Japan",
+            "places": [
+              {
+                "name": "Tokyo"
+              },
+              {
+                "name": "Kyoto"
+              },
+              {
+                "name": "Osaka"
+              }
+            ]
+          },
+          {
+            "name": "Thailand",
+            "places": [
+              {
+                "name": "Bangkok"
+              },
+              {
+                "name": "Phuket"
+              },
+              {
+                "name": "Chiang Mai"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Africa",
+        "places": ""
+      }
+    ]
+  }
+}

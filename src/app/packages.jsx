@@ -27,17 +27,17 @@ export function Card({ img, description, destination }) {
 const packages = [
   {
     img: "/temp/img1.jpg",
-    destination: "New York",
+    destination: "New York to India",
     description: "Explore the bustling streets of New York City."
   },
   {
     img: "/temp/img2.jpg",
-    destination: "Paris",
+    destination: "Golden Triangle",
     description: "Experience the romance of Paris and its iconic landmarks."
   },
   {
     img: "/temp/img3.jpg",
-    destination: "Tokyo",
+    destination: "India to Europe",
     description: "Discover the vibrant culture and cuisine of Tokyo."
   },
   {
@@ -109,10 +109,10 @@ export default function Packages() {
       </div>
       <div className='flex justify-between items-center mt-[15px] translate-y-[-200px] z-[50]'>
         <button onClick={handlePrevClick} className="h-[32px] w-[32px] md:h-[48px] md:w-[48px] bg-white rounded-full flex justify-center items-center transform translate-x-[-11px] md:translate-x-[-24px] border-[#EAEAEA] border-[2px] z-[2]">
-          <Image src="/icons/prev.svg" alt="prev" height={150} width={150}/>
+          <Image src="/icons/prev.svg" alt="prev" height={20} width={20}/>
         </button>
         <button onClick={handleNextClick} className="h-[32px] w-[32px] md:h-[48px] md:w-[48px] bg-white rounded-full flex justify-center items-center transform translate-x-[-5%] md:translate-x-[24px] border-[#EAEAEA] border-[2px] z-[2]">
-          <Image src="/icons/next.svg" alt="next" height={150} width={150}/>
+          <Image src="/icons/next.svg" alt="next" height={20} width={20}/>
         </button>
       </div>
     </div>

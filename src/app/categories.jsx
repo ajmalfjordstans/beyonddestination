@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export function Card(data) {
   return (
-    <div className='relative h-[200px] w-full rounded-[8px] overflow-hidden p-[10px] flex items-end bg-custom-gradient'>
+    <div className='relative min-h-[200px] w-full rounded-[8px] overflow-hidden p-[10px] flex items-end bg-custom-gradient content'>
       <Image
         src={data.data.img}
         width={400}
@@ -236,7 +236,7 @@ const packages = [
 export default function Categories() {
   const [activeTab, setActiveTab] = useState('spiritual')
   useEffect(() => {
-    gsap.fromTo(".content", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: .7, stagger: 0.01});
+    gsap.fromTo(".content", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: .7, stagger: 0.05});
   }, [activeTab])
   return (
     <div className='container mx-auto py-[30px] px-[5%] md:px-[10%]'>
@@ -261,14 +261,13 @@ export default function Categories() {
         </div>
       </div>
 
-      <div className="grid grid-cols-4 gap-4 my-[30px] ">
+      <div className="grid grid-cols-4 gap-4 my-[30px] h-[100%]">
         {packages
           .filter(pkg => pkg.category === activeTab)
           .map((data, id) => {
             return (
-              <div className="content"  key={id}>
-                <Card data={data} />
-              </div>
+              // <div className="content" >
+                <Card data={data}  key={id}/>
             )
           })}
       </div>

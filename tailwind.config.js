@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'hero-bg': "url('/images/hero-bg.jpg')",
+        'hero-blog': "url('/images/blog-hero.jpg')",
         'banner': "url('/images/pattern.png')",
         'winebanner': "url('/images/wine-banner.png')",
         'guidebanner': "url('/images/guide-banner.jpg')",
@@ -27,7 +28,8 @@ module.exports = {
       boxShadow: {
         custom: '0px 3px 8px -1px rgba(50, 50, 71, 0.05), 0px 0px 1px 0px rgba(12, 26, 75, 0.24)',
         custom2: '0px 6px 12px -2px rgba(50, 50, 71, 0.1), 0px 0px 2px 1px rgba(12, 26, 75, 0.3)',
-
+        boxShadow: '20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff',
+        boxShadow2: '7px 7px 16px #d6d6d6, -7px -7px 16px #ffffff',
       },
     },
   },
