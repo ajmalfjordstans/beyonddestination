@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from '@material-tailwind/react'
 import Image from 'next/image'
 import React from 'react'
@@ -12,7 +14,7 @@ export default function Hero() {
           <p className='font-[900] text-[54px] text-primary'>Where do you want to <span className='text-[#FFA500]'>go?</span></p>
         </div>
 
-        <form className="mx-auto mt-[30px] sticky top-[10px]">
+        <form className="mx-auto mt-[30px]">
           <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
           <div className="relative">
             <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">

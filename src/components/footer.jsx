@@ -37,7 +37,7 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <div className='bg-black rounded-2xl h-[110px] w-[300px]  mb-[20px] p-[15px] hover:cursor-pointer flex items-center gap-4 hover:bg-gray-800 transition-all duration-300 text-white'>
+            <div className='bg-black rounded-2xl h-[110px] w-[300px]  mb-[20px] p-[15px] hover:cursor-pointer flex justify-between items-center gap-4 hover:bg-gray-800 transition-all duration-300 text-white'>
               <p className='font-[600] text-[24px]'>Become a<br /> partner with us</p>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />

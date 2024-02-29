@@ -1,70 +1,36 @@
 'use client'
 
+import { ReadMore } from '@/app/packages/package-content'
+import Image from 'next/image'
 import React, { useRef } from 'react'
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 
-import Image from 'next/image';
-import Link from 'next/link';
-
-export function Card({ img, description, destination }) {
+export function TestimonialCard() {
   return (
-    <Link
-      href='/packages'
-    >
-      <div className='w-[full]'>
-        <Image
-          src={img}
-          width={400}
-          height={400}
-          className='rounded-[8px] w-full h-[270px] overflow-hidden object-cover'
-          alt='package image'
-        />
-        <div className='mt-[8px]'>
-          <p className='font-[600] text-[22px]'>{destination}</p>
-          <p className='font-[400] text-[14px]'>{description}</p>
+    <div className='w-full shadow-md border-[1px] rounded-md p-[20px]'>
+      <div className='flex gap-2 items-center'>
+        <Image src="/temp/img28.jpg" height={40} width={40} alt='avatar' className='h-[35px] w-[35px] rounded-full overflow-hidden' />
+        <div>
+          <p className='font-[600]'> Radu Hondola </p>
+          <p className='font-[300] text-[12px]'>1 contribution</p>
         </div>
       </div>
-    </Link>
+      <div className='py-[10px] flex flex-col gap-2'>
+        <p className='font-[600]'>Great day at banana beach</p>
+        <ReadMore>
+          About 15 min. Boat trip to Banana Beach. The beach is clean, with white sand and turquoise water. The are seating areas for free or Sunbeds with extra charge. Snorkeling was very nice, we got to see colorful coral and lots of fishes. The food that was included in the tour was amazing, fresh seafood and also meat and salads. There are a lot of activities available on the island: para sailing, swimming, kayak, and most of all many photo ops with amazing views. The guide was nice and familiar Wich we liked.
+        </ReadMore>
+        <p className='text-[12px] text-gray-400'>Visited March 2023</p>
+      </div>
+    </div>
   )
 }
 
-const packages = [
-  {
-    img: "/temp/img1.jpg",
-    destination: "New York to India",
-    description: "Explore the bustling streets of New York City."
-  },
-  {
-    img: "/temp/img2.jpg",
-    destination: "Golden Triangle",
-    description: "Experience the romance of Paris and its iconic landmarks."
-  },
-  {
-    img: "/temp/img3.jpg",
-    destination: "India to Europe",
-    description: "Discover the vibrant culture and cuisine of Tokyo."
-  },
-  {
-    img: "/temp/img4.jpg",
-    destination: "Rome",
-    description: "Immerse yourself in the rich history and architecture of Rome."
-  },
-  {
-    img: "/temp/img5.jpg",
-    destination: "Dubai",
-    description: "Indulge in luxury and adventure in the dynamic city of Dubai."
-  },
-  {
-    img: "/temp/img6.jpg",
-    destination: "Bali",
-    description: "Relax on beautiful beaches and experience the tranquil beauty of Bali."
-  }
-];
-
-export default function Packages() {
+export default function Testimonials() {
   const swiperRef = useRef(null);
 
   const breakpoints = {
@@ -92,26 +58,22 @@ export default function Packages() {
     }
   };
   return (
-    <div className='container mx-auto pt-[30px] px-[5%] md:px-[10%]'>
-      <div>
-        <p className='font-[500] text-[28px]'>Our Packages</p>
-        <p className='font-[400] text-[18px] text-[gray]'>Desc about our packages</p>
-      </div>
-      <div className='mt-[30px] relative w-[90%] mx-auto'>
+    <div className='pt-[30px]'>
+      <p className='font-[700] text-[28px]'>Testimonials</p>
+      <div className='pt-[15px] px-[5%]'>
         <Swiper
           spaceBetween={20}
-          slidesPerView={4}
+          slidesPerView={3.2}
           // onSlideChange={() => console.log('slide change')}
           breakpoints={breakpoints}
           // onSwiper={(swiper) => console.log(swiper)}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
         >
-          {packages.map((data, id) => {
-            return (
-              <SwiperSlide key={id}>{Card(data)}</SwiperSlide>
-            )
-          })}
-
+          <SwiperSlide > <TestimonialCard /></SwiperSlide>
+          <SwiperSlide > <TestimonialCard /></SwiperSlide>
+          <SwiperSlide > <TestimonialCard /></SwiperSlide>
+          <SwiperSlide > <TestimonialCard /></SwiperSlide>
+          <SwiperSlide > <TestimonialCard /></SwiperSlide>
         </Swiper>
       </div>
       <div className='flex justify-between items-center mt-[15px] translate-y-[-200px] z-[50]'>

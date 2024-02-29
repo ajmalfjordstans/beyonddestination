@@ -1,9 +1,14 @@
+import Footer from '@/components/footer'
+import Navbar from '@/components/navbar'
 import React from 'react'
+import PackageContent from './package-content'
 
 export default function Page() {
   return (
     <div>
-      Packages
+      <Navbar />
+      <PackageContent />
+      <Footer />
     </div>
   )
 }

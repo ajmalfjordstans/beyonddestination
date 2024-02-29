@@ -3,20 +3,23 @@
 import React, { useEffect, useState } from 'react'
 import { gsap } from 'gsap';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function Card(data) {
   return (
-    <div className='relative min-h-[200px] w-full rounded-[8px] overflow-hidden p-[10px] flex items-end bg-custom-gradient content'>
-      <Image
-        src={data.data.img}
-        width={400}
-        height={400}
-        className='absolute h-full w-full inset-0 object-cover z-[-1]'
-        alt='categories'
-      />
-      {/* <div className="absolute inset-0 bg-gradient-to-t from-black via-black to-transparent"></div> */}
-      <p className='font-[600] text-[18px] z-[2] text-white'>{data.data.destination}</p>
-    </div>
+    <Link href="/destinations">
+      <div className='relative min-h-[200px] w-full rounded-[8px] overflow-hidden p-[10px] flex items-end bg-custom-gradient content'>
+        <Image
+          src={data.data.img}
+          width={400}
+          height={400}
+          className='absolute h-full w-full inset-0 object-cover z-[-1]'
+          alt='categories'
+        />
+        {/* <div className="absolute inset-0 bg-gradient-to-t from-black via-black to-transparent"></div> */}
+        <p className='font-[600] text-[18px] z-[2] text-white'>{data.data.destination}</p>
+      </div>
+    </Link>
   )
 }
 
@@ -236,7 +239,7 @@ const packages = [
 export default function Categories() {
   const [activeTab, setActiveTab] = useState('spiritual')
   useEffect(() => {
-    gsap.fromTo(".content", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: .7, stagger: 0.05});
+    gsap.fromTo(".content", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: .7, stagger: 0.05 });
   }, [activeTab])
   return (
     <div className='container mx-auto py-[30px] px-[5%] md:px-[10%]'>
@@ -267,7 +270,7 @@ export default function Categories() {
           .map((data, id) => {
             return (
               // <div className="content" >
-                <Card data={data}  key={id}/>
+              <Card data={data} key={id} />
             )
           })}
       </div>

@@ -1,13 +1,18 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 export function DestinationCard() {
   return (
     <div className='grid grid-cols-2 my-[20px]'>
-      <Image src="/temp/img26.jpg" height={900} width={900} className='h-[90%] w-[90%] rounded-2xl object-cover' alt='destination' />
+      <Link href='/destinations/banana'>
+        <Image src="/temp/img26.jpg" height={900} width={900} className='h-[90%] w-[90%] rounded-2xl object-cover' alt='destination' />
+      </Link>
       <div>
         <p className='font-[300] text-[24px]'>02.</p>
-        <p className='font-[700] text-[32px]'>Banana Beach</p>
+        <Link href='/destinations/banana'>
+          <p className='font-[700] text-[32px]'>Banana Beach</p>
+        </Link>
         <div className='flex items-center gap-1'>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />

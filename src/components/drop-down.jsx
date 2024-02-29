@@ -70,10 +70,10 @@ export default function DropDown({ selected }) {
   }, [selected])
   // console.log(destinationsData);
   return (
-    <div className='text-black'>
+    <div className='text-black z-[100] '>
       {selected !== '' &&
         <div className='relative w-full justify-center pt-[10px]'>
-          <div className='w-[800px] h-[400px] bg-white shadow-lg rounded-lg border mx-auto content2 grid grid-cols-4 '>
+          <div className='w-[800px] h-[240px] bg-white shadow-lg rounded-lg border mx-auto content2 grid grid-cols-4 '>
             {selected === 'Destinations' &&
               <>
                 <List data={destinationsData.destinations} setDropDetails={setDropDetails} dropDetails={dropDetails} depth='0' />

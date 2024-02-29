@@ -1,9 +1,6 @@
-'use client'
-import Image from 'next/image'
-
 //Store
-import { updateUser } from '@/state/user-reducer'
-import { useDispatch, useSelector } from 'react-redux'
+// import { updateUser } from '@/state/user-reducer'
+// import { useDispatch, useSelector } from 'react-redux'
 import Navbar from '@/components/navbar'
 import Hero from './hero'
 import Banner from './banner'
@@ -14,13 +11,13 @@ import TourGuide from './tour-guide'
 import Footer from '@/components/footer'
 
 export default function Home() {
-  const user = useSelector((state) => state.user)
-  const dispatch = useDispatch()
-  const updateUserHandler = (id) => [
-    dispatch(updateUser({
-      id
-    }))
-  ]
+  // const user = useSelector((state) => state.user)
+  // const dispatch = useDispatch()
+  // const updateUserHandler = (id) => [
+  //   dispatch(updateUser({
+  //     id
+  //   }))
+  // ]
   return (
     <div className=''>
       <Navbar />
@@ -31,14 +28,6 @@ export default function Home() {
       <WineTasting />
       <TourGuide />
       <Footer />
-      {/* 
-      Our Packages
-      Tours by category
-      Wine Tasting
-      Find Tour Guide
-      List tour guides
-      Register Tour guide
-      */}
     </div>
   )
 }

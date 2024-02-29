@@ -9,7 +9,7 @@ export default function Navbar() {
   const [selected, setSelected] = useState('')
 
   return (
-    <nav className='w-[100vw] h-[10dvh] bg-primary font-lato text-white shadow-custom fixed z-[50]'>
+    <nav className='w-[100vw] h-[10dvh] bg-primary font-lato text-white shadow-custom  z-[50]'>
       <div className='container h-full mx-auto px-[10%] grid grid-cols-3 items-center'>
         <Link
           href="/"
