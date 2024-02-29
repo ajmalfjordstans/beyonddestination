@@ -73,10 +73,12 @@ export default function Page() {
               </div>
             </div>
           </div>
-          <Gallery />
+          <div className='w-[70%]'>
+            <Gallery />
+          </div>
         </div>
 
-        <Testimonials/>
+        <Testimonials />
       </div>
       <Footer />
     </div>
