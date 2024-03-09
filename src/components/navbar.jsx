@@ -4,12 +4,13 @@ import { Button } from '@material-tailwind/react'
 import React, { useState } from 'react'
 import DropDown from './drop-down'
 import Link from 'next/link'
+import Login from './login'
 
 export default function Navbar() {
   const [selected, setSelected] = useState('')
-
+  const [showLogin, setShowLogin] = useState(false)
   return (
-    <nav className='w-[100vw] h-[10dvh] bg-primary font-lato text-white shadow-custom  z-[50]'>
+    <nav className='w-full h-[100px] bg-primary font-lato text-white shadow-custom  z-[50]'>
       <div className='container h-full mx-auto px-[10%] grid grid-cols-3 items-center'>
         <Link
           href="/"
@@ -48,12 +49,14 @@ export default function Navbar() {
           <Button
             variant='filled'
             className='bg-white rounded-full text-primary px-4 py-2 font-semibold'
+            onClick={() => setShowLogin(true)}
           >
             Login
           </Button>
         </div>
       </div>
       <DropDown selected={selected} />
+      {showLogin && <Login setShowLogin={setShowLogin}/>}
     </nav>
   )
 }

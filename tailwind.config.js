@@ -10,6 +10,7 @@ module.exports = {
       backgroundImage: {
         'hero-bg': "url('/images/hero-bg.jpg')",
         'hero-blog': "url('/images/blog-hero.jpg')",
+        'hero-wedding': "url('/images/indian-wedding.jpg')",
         'banner': "url('/images/pattern.png')",
         'winebanner': "url('/images/wine-banner.png')",
         'guidebanner': "url('/images/guide-banner.jpg')",
