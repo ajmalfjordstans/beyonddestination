@@ -5,7 +5,7 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <div className='bg-[#FFA500] mt-[25px] pt-[50px] pb-[15px]'>
+    <div className='bg-[#FFA500] pt-[50px] pb-[15px]'>
       <div className='container mx-auto w-full'>
         <div className='text-black container px-[5%]'>
           <div>

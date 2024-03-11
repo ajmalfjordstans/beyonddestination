@@ -8,7 +8,7 @@ import Link from 'next/link';
 export function Card(data) {
   return (
     <Link href="/destinations">
-      <div className='relative min-h-[200px] w-full rounded-[8px] overflow-hidden p-[10px] flex items-end bg-custom-gradient content'>
+      <div className='relative min-h-[350px] w-full rounded-[8px] overflow-hidden p-[10px] flex items-end bg-custom-gradient content'>
         <Image
           src={data.data.img}
           width={400}
@@ -16,8 +16,11 @@ export function Card(data) {
           className='absolute h-full w-full inset-0 object-cover z-[-1]'
           alt='categories'
         />
-        {/* <div className="absolute inset-0 bg-gradient-to-t from-black via-black to-transparent"></div> */}
-        <p className='font-[600] text-[18px] z-[2] text-white'>{data.data.destination}</p>
+        <div className="absolute inset-0 flex p-[20px] items-end"
+          style={{ background: `linear-gradient(0deg, rgba(0,0,0,0.8324579831932774) 0%, rgba(255,255,255,0) 39%)` }}
+        >
+          <p className='font-[600] text-[18px] z-[2] text-white'>{data.data.destination}</p>
+        </div>
       </div>
     </Link>
   )
@@ -249,12 +252,12 @@ export default function Categories() {
       </div>
 
       <div className='flex mt-[30px]'>
-        <div className='bg-gray-200 rounded-md mx-auto flex gap-2 items-center justify-evenly p-2'>
+        <div className='bg-gray-200 rounded-full mx-auto flex gap-2 items-center justify-evenly p-2'>
           {categoryTabs.map((tab, id) => {
             return (
               <div
                 key={id}
-                className={`transition-colors duration-300 capitalize hover:cursor-pointer px-3 py-2 text-black ${activeTab === tab ? 'bg-primary rounded-md text-white' : ''}`}
+                className={`transition-colors duration-300 capitalize hover:cursor-pointer px-3 py-2 text-black ${activeTab === tab ? 'bg-primary rounded-full text-white' : ''}`}
                 onClick={() => setActiveTab(tab)}
               >
                 {tab}
@@ -264,7 +267,7 @@ export default function Categories() {
         </div>
       </div>
 
-      <div className="grid grid-cols-4 gap-4 my-[30px] h-[100%]">
+      <div className="grid grid-cols-3 gap-4 my-[30px] h-[100%]">
         {packages
           .filter(pkg => pkg.category === activeTab)
           .map((data, id) => {

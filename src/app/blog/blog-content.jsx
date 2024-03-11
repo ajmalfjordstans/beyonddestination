@@ -6,7 +6,7 @@ import React from 'react'
 
 export function BlogCard() {
   return (
-    <div className='max-w-[600px] w-full h-[300px] shadow-boxShadow2 rounded-2xl p-[15px] flex mx-auto'>
+    <div className='max-w-[600px] w-full h-[300px] shadow-boxShadow2 rounded-2xl p-[15px] flex mx-auto mb-[30px]'>
       <Image
         src="/temp/blog.jpg"
         height={400}

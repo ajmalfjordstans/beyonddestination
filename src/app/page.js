@@ -22,7 +22,7 @@ export default function Home() {
     <div className=''>
       <Navbar />
       <Hero />
-      <Banner />
+      {/* <Banner /> */}
       <Packages />
       <Categories />
       <WineTasting />

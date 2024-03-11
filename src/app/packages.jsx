@@ -68,11 +68,11 @@ export default function Packages() {
   const swiperRef = useRef(null);
 
   const breakpoints = {
-    320: { slidesPerView: 1.1, spaceBetween: 15, },
-    530: { slidesPerView: 2.1, spaceBetween: 15, },
-    780: { slidesPerView: 2.1, spaceBetween: 15, },
-    960: { slidesPerView: 3.1, spaceBetween: 15, },
-    1440: { slidesPerView: 4.1, spaceBetween: 15, },
+    320: { slidesPerView: 1, spaceBetween: 15, },
+    530: { slidesPerView: 2, spaceBetween: 15, },
+    780: { slidesPerView: 2, spaceBetween: 15, },
+    960: { slidesPerView: 3, spaceBetween: 15, },
+    // 1440: { slidesPerView: 4.1, spaceBetween: 15, },
   }
 
   const handleNextClick = () => {
@@ -80,12 +80,10 @@ export default function Packages() {
       swiperRef.current.slideNext(900);
       swiperRef.current.slideNext(900);
       swiperRef.current.slideNext(900);
-      swiperRef.current.slideNext(900);
     }
   };
   const handlePrevClick = () => {
     if (swiperRef.current !== null) {
-      swiperRef.current.slidePrev(900);
       swiperRef.current.slidePrev(900);
       swiperRef.current.slidePrev(900);
       swiperRef.current.slidePrev(900);
@@ -97,10 +95,10 @@ export default function Packages() {
         <p className='font-[500] text-[28px]'>Our Packages</p>
         <p className='font-[400] text-[18px] text-[gray]'>Desc about our packages</p>
       </div>
-      <div className='mt-[30px] relative w-[90%] mx-auto'>
+      <div className='mt-[30px] relastive w-[90%] mx-auto'>
         <Swiper
           spaceBetween={20}
-          slidesPerView={4}
+          slidesPerView={3.1}
           // onSlideChange={() => console.log('slide change')}
           breakpoints={breakpoints}
           // onSwiper={(swiper) => console.log(swiper)}
