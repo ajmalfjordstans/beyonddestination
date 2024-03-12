@@ -5,21 +5,41 @@ import React, { useState } from 'react'
 import DropDown from './drop-down'
 import Link from 'next/link'
 import Login from './login'
+import Image from 'next/image'
 
 export default function Navbar() {
   const [selected, setSelected] = useState('')
   const [showLogin, setShowLogin] = useState(false)
   return (
-    <nav className='w-full h-[100px] bg-primary font-lato text-white shadow-custom  z-[50]'>
-      <div className='container h-full mx-auto px-[10%] grid grid-cols-3 items-center'>
-        <Link
-          href="/"
-        >
-          <div className='font-bold text-[22px]'>
-            Beyond Destination
+    <nav className='w-full font-lato text-primary shadow-custom  z-[50]'>
+      <div className='container h-full mx-auto px-[10%] py-[20px]'>
+        <div className='grid grid-cols-3 items-center mx-auto'>
+          <div></div>
+          <Link
+            href="/"
+            className='flex items-center justify-center'
+          >
+            <Image src='/images/logo.png' height={100} width={100} alt='logo' className='h-[45px] w-[50px]' />
+            <div className='font-bold text-[22px]'>
+              Beyond Destination
+            </div>
+          </Link>
+
+          <div className='flex justify-end'>
+            <Button
+              variant='outlined'
+              className='border-primary rounded-full text-primary px-1 py-1 font-[600] text-[14px] flex items-center gap-2'
+              onClick={() => setShowLogin(true)}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+              </svg>
+
+              My Account
+            </Button>
           </div>
-        </Link>
-        <div className='flex gap-6 justify-center'>
+        </div>
+        <div className='flex gap-6 justify-center mt-[15px] font-[600]'>
           <div className='flex items-center gap-1'>
             <p className={`hover:cursor-pointer select-none`}
               onClick={() => selected === 'Our Packages' ? setSelected('') : setSelected('Our Packages')}
@@ -45,18 +65,9 @@ export default function Navbar() {
             </svg>
           </div>
         </div>
-        <div className='flex justify-end'>
-          <Button
-            variant='filled'
-            className='bg-white rounded-full text-primary px-4 py-2 font-semibold'
-            onClick={() => setShowLogin(true)}
-          >
-            Login
-          </Button>
-        </div>
       </div>
       <DropDown selected={selected} />
-      {showLogin && <Login setShowLogin={setShowLogin}/>}
+      {showLogin && <Login setShowLogin={setShowLogin} />}
     </nav>
   )
 }

@@ -1,4 +1,4 @@
-import { Inter, Lato } from 'next/font/google'
+import { Inter, Lato, Libre_Franklin } from 'next/font/google'
 import './globals.css'
 import StoreProvider from '../state/storeProvider'
 import Layout from '@/components/layout'
@@ -7,10 +7,10 @@ const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter'
 })
-const lato = Lato({
+const franklin = Libre_Franklin({
   subsets: ['latin'],
   weight: ["100", "300", "400", "700", "900"],
-  variable: '--font-lato'
+  variable: '--font-franklin'
 })
 
 export const metadata = {
@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <StoreProvider>
         <Layout>
-          <body className={`${lato.className} ${inter.variable} ${lato.variable}`}>
+          <body className={`${franklin.className} ${inter.variable} ${franklin.variable}`}>
             {children}
           </body>
         </Layout>

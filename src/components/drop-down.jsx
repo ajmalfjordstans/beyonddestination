@@ -27,7 +27,7 @@ export function List({ data, setDropDetails, dropDetails, depth }) {
 
   return (
     <>
-      <div className={`text-black w-full h-[full] ${depth != 4 && 'border-r-[2px]'} p-[10px]`} ref={listRef}>
+      <div className={`text-black w-full h-[full] ${depth != 4 && 'border-r-[2px]'} p-[20px]`} ref={listRef}>
         <p className='font-[600] text-[22px] hover:cursor-pointer capitalize'>{data?.name}</p>
         {data?.places?.length > 0 && data?.places?.map((destination, id) => (
           <div key={id} className='flex justify-between items-center hover:cursor-pointer'
@@ -59,7 +59,7 @@ export default function DropDown({ selected }) {
     depth3: '',
   })
   useEffect(() => {
-    gsap.from(".content2", { opacity: 0, y: -50, height: 0 });
+    // gsap.from(".content2", { opacity: 0, y: -50, height: 0 });
     setDropDetails({
       depth: 0,
       depth0: '',
@@ -70,10 +70,10 @@ export default function DropDown({ selected }) {
   }, [selected])
   // console.log(destinationsData);
   return (
-    <div className='text-black z-[100] '>
+    <div className='text-black  '>
       {selected !== '' &&
-        <div className='relative w-full justify-center pt-[10px]'>
-          <div className='w-[800px] h-[240px] bg-white shadow-lg rounded-lg border mx-auto content2 grid grid-cols-4 '>
+        <div className='absolute w-full justify-center z-[100]'>
+          <div className='w-[80%] h-[440px] bg-white shadow-lg rounded-b-lg border mx-auto content2 grid grid-cols-4 '>
             {selected === 'Destinations' &&
               <>
                 <List data={destinationsData.destinations} setDropDetails={setDropDetails} dropDetails={dropDetails} depth='0' />

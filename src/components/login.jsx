@@ -24,7 +24,7 @@ export default function Login({ setShowLogin }) {
             </svg>
           </div>
           <p className='text-black mb-[15px] font-[500] text-[18px]'>Please choose one from below</p>
-          <div className='text-gray-600 flex items-center gap-3 shadow-lg p-[10px] rounded-md hover:cursor-pointer w-[210px] bg-white'>
+          <div className='text-gray-600 flex items-center gap-3 shadow-lg p-[10px] rounded-md hover:cursor-pointer w-[230px] bg-white'>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className='w-6 h-6'
@@ -49,7 +49,7 @@ export default function Login({ setShowLogin }) {
             </svg>
             <p>Continue with Google</p>
           </div>
-          <div className='text-white bg-black flex items-center gap-3 shadow-lg p-[10px] rounded-md hover:cursor-pointer w-[210px]'>
+          <div className='text-white bg-black flex items-center gap-3 shadow-lg p-[10px] rounded-md hover:cursor-pointer w-[230px]'>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 16" className='w-6 h-6'>
               <path
                 fill="#fff"

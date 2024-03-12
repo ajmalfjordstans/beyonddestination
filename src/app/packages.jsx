@@ -92,7 +92,7 @@ export default function Packages() {
   return (
     <div className='container mx-auto pt-[30px] px-[5%] md:px-[10%]'>
       <div>
-        <p className='font-[500] text-[28px]'>Our Packages</p>
+        <p className='font-[600] text-[28px]'>Our Packages</p>
         <p className='font-[400] text-[18px] text-[gray]'>Desc about our packages</p>
       </div>
       <div className='mt-[30px] relastive w-[90%] mx-auto'>

@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
+        'landing-bg': "url('/images/landing-page.jpg')",
         'hero-bg': "url('/images/hero-bg.jpg')",
         'hero-blog': "url('/images/blog-hero.jpg')",
         'hero-wedding': "url('/images/indian-wedding.jpg')",
@@ -20,11 +21,13 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       fontFamily: {
-        lato: ['var(--font-lato)'],
+        franklin: ['var(--font-lato)'],
         inter: ['var(--font-inter)'],
       },
       colors: {
-        primary: '#03A9F4',
+        primary: '#5880b5',
+        secondary: '#1c5d98',
+        third: '#3e517a',
       },
       boxShadow: {
         custom: '0px 3px 8px -1px rgba(50, 50, 71, 0.05), 0px 0px 1px 0px rgba(12, 26, 75, 0.24)',

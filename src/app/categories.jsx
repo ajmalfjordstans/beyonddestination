@@ -16,10 +16,17 @@ export function Card(data) {
           className='absolute h-full w-full inset-0 object-cover z-[-1]'
           alt='categories'
         />
-        <div className="absolute inset-0 flex p-[20px] items-end"
+        <div className="absolute inset-0 flex  items-end"
           style={{ background: `linear-gradient(0deg, rgba(0,0,0,0.8324579831932774) 0%, rgba(255,255,255,0) 39%)` }}
         >
-          <p className='font-[600] text-[18px] z-[2] text-white'>{data.data.destination}</p>
+          <div className='bg-white p-[20px] w-full rounded-tr-3xl z-[2]'>
+            <p className='font-[600] text-[18px]  text-black'>{data.data.destination}</p>
+            <div className='flex justify-between'>
+              <p className='text-[14px] text-black'>London Gatwick</p>
+              <p className='text-[14px] text-black'>starting from <span className='font-[600] text-[18px]'>$284</span></p>
+
+            </div>
+          </div>
         </div>
       </div>
     </Link>
@@ -245,39 +252,40 @@ export default function Categories() {
     gsap.fromTo(".content", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: .7, stagger: 0.05 });
   }, [activeTab])
   return (
-    <div className='container mx-auto py-[30px] px-[5%] md:px-[10%]'>
-      <div>
-        <p className='font-[500] text-[28px]'>Categories</p>
-        <p className='font-[400] text-[18px] text-[gray]'>Desc about our categories</p>
-      </div>
+    <div className='bg-[#8ee3f5]'>
+      <div className='container mx-auto py-[30px] px-[5%] md:px-[10%]'>
+        <div>
+          <p className='font-[600] text-[28px]'>Categories</p>
+          <p className='font-[400] text-[18px] text-[gray]'>Desc about our categories</p>
+        </div>
 
-      <div className='flex mt-[30px]'>
-        <div className='bg-gray-200 rounded-full mx-auto flex gap-2 items-center justify-evenly p-2'>
-          {categoryTabs.map((tab, id) => {
-            return (
-              <div
-                key={id}
-                className={`transition-colors duration-300 capitalize hover:cursor-pointer px-3 py-2 text-black ${activeTab === tab ? 'bg-primary rounded-full text-white' : ''}`}
-                onClick={() => setActiveTab(tab)}
-              >
-                {tab}
-              </div>
-            )
-          })}
+        <div className='flex mt-[30px]'>
+          <div className='rounded-full flex gap-2 items-center justify-evenly p-2'>
+            {categoryTabs.map((tab, id) => {
+              return (
+                <div
+                  key={id}
+                  className={`transition-colors duration-300 capitalize hover:cursor-pointer px-3 py-2 text-black text-[14px] ${activeTab === tab ? 'border-b-[2px] border-primary font-[600]' : ''}`}
+                  onClick={() => setActiveTab(tab)}
+                >
+                  {tab}
+                </div>
+              )
+            })}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-3 gap-4 my-[30px] h-[100%]">
+          {packages
+            .filter(pkg => pkg.category === activeTab)
+            .map((data, id) => {
+              return (
+                // <div className="content" >
+                <Card data={data} key={id} />
+              )
+            })}
         </div>
       </div>
-
-      <div className="grid grid-cols-3 gap-4 my-[30px] h-[100%]">
-        {packages
-          .filter(pkg => pkg.category === activeTab)
-          .map((data, id) => {
-            return (
-              // <div className="content" >
-              <Card data={data} key={id} />
-            )
-          })}
-      </div>
-
     </div>
   )
 }
