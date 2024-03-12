@@ -2,6 +2,7 @@
 
 import { Button } from '@material-tailwind/react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react'
 
 export function Card(data) {
@@ -57,10 +58,12 @@ export function Card(data) {
             </div>
           </div>
         </div>
-        <Button
-          fullWidth
-          className='bg-primary px-[10px] py-[5px] rounded-md font-lato mt-[10px]'
-        >View</Button>
+        <Link href={`/tour-guide/guide-name`}>
+          <Button
+            fullWidth
+            className='bg-primary px-[10px] py-[5px] rounded-md font-lato mt-[10px]'
+          >View</Button>
+        </Link>
       </div>
     </div>
   )
@@ -120,7 +123,7 @@ export default function Guides() {
         <div className='mt-[40px] grid grid-cols-4 gap-10'>
           {guides.map((guide, id) => {
             return (
-              <Card data={guide} key={id}/>
+              <Card data={guide} key={id} />
             )
           })}
         </div>
