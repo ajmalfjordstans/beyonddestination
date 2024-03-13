@@ -11,15 +11,14 @@ export default function Navbar() {
   const [selected, setSelected] = useState('')
   const [showLogin, setShowLogin] = useState(false)
   return (
-    <nav className='w-full font-lato text-primary shadow-custom  z-[50]'>
+    <nav className='w-full font-lato text-white shadow-custom bg-primary z-[50]'>
       <div className='container h-full mx-auto px-[10%] py-[20px]'>
-        <div className='grid grid-cols-3 items-center mx-auto'>
-          <div></div>
+        <div className='grid grid-cols-2 items-center mx-auto'>
           <Link
             href="/"
-            className='flex items-center justify-center'
+            className='flex items-center gap-2'
           >
-            <Image src='/images/logo.png' height={100} width={100} alt='logo' className='h-[45px] w-[50px]' />
+            <Image src='/images/logo_2.png' height={100} width={100} alt='logo' className='h-[45px] w-[40px]' />
             <div className='font-bold text-[22px]'>
               Beyond Destination
             </div>
@@ -28,7 +27,7 @@ export default function Navbar() {
           <div className='flex justify-end'>
             <Button
               variant='outlined'
-              className='border-primary rounded-full text-primary px-1 py-1 font-[600] text-[14px] flex items-center gap-2'
+              className='border-white rounded-full text-white px-1 py-1 font-[600] text-[14px] flex items-center gap-2'
               onClick={() => setShowLogin(true)}
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -39,7 +38,7 @@ export default function Navbar() {
             </Button>
           </div>
         </div>
-        <div className='flex gap-6 justify-center mt-[15px] font-[600]'>
+        <div className='flex gap-6 justify-center mt-[5px] font-[600]'>
           <div className='flex items-center gap-1'>
             <p className={`hover:cursor-pointer select-none`}
               onClick={() => selected === 'Our Packages' ? setSelected('') : setSelected('Our Packages')}

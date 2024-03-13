@@ -16,10 +16,10 @@ const franklin = Libre_Franklin({
 export const metadata = {
   title: 'Beyond Destination',
   description: 'Your travel guide',
-  // icons: {
-  //   icon: "/logo/nombox.svg",
-  //   apple: "/logo/nombox.svg",
-  // }
+  icons: {
+    icon: "/images/logo_2.png",
+    apple: "/images/logo_2.png",
+  }
 }
 
 export default function RootLayout({ children }) {

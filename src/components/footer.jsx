@@ -14,7 +14,19 @@ export default function Footer() {
         <div className='text-white container px-[5%]'>
           <div>
             <div className='flex justify-around pr-[3%] pb-[25px] font-[300]'>
+              <div className='flex flex-col gap-2'>
+                <Image src='/images/logo_3.jpeg' height={600} width={600} alt='logo' className='h-[215px] w-[240px] mx-auto' />
+                <p>Address</p>
+                <p>Mail</p>
+                <p>Phone Numbers</p>
+                <div className='bg-black rounded-2xl h-[110px] w-[300px] my-[20px] p-[15px] hover:cursor-pointer flex justify-between items-center gap-4 hover:bg-gray-800 transition-all duration-300 text-white'>
+                  <p className='font-[600] text-[24px]'>Become a<br /> partner with us</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                  </svg>
 
+                </div>
+              </div>
               <div className='flex flex-col gap-2'>
                 <p className='font-[500] mb-[15px]'>TOP DESTINATIONS</p>
                 <p className='hover:cursor-pointer'>New York City</p>
@@ -29,14 +41,6 @@ export default function Footer() {
                 <p className='hover:cursor-pointer'>Chicago</p>
                 <p className='hover:cursor-pointer'>England</p>
                 <p className='hover:cursor-pointer'>Tokyo</p>
-                <p className='hover:cursor-pointer'>France</p>
-                <p className='hover:cursor-pointer'>Thailand</p>
-                <p className='hover:cursor-pointer'>Ireland</p>
-                <p className='hover:cursor-pointer'>Rome</p>
-                <p className='hover:cursor-pointer'>London</p>
-                <p className='hover:cursor-pointer'>Los Angeles</p>
-                <p className='hover:cursor-pointer'>Mexico</p>
-                <p className='hover:cursor-pointer'>San Francisco</p>
                 <p className='hover:cursor-pointer'>Explore More Destinations</p>
               </div>
               <div className='flex flex-col gap-2'>
@@ -69,19 +73,7 @@ export default function Footer() {
                 <p className='hover:cursor-pointer'>Write For Us</p>
                 <p className='hover:cursor-pointer'>Cookie Settings</p>
               </div>
-              <div className='flex flex-col gap-2'>
-                <Image src='/images/logo_3.jpeg' height={600} width={600} alt='logo' className='h-[215px] w-[240px] mx-auto' />
-                <p>Address</p>
-                <p>Mail</p>
-                <p>Phone Numbers</p>
-                <div className='bg-black rounded-2xl h-[110px] w-[300px] my-[20px] p-[15px] hover:cursor-pointer flex justify-between items-center gap-4 hover:bg-gray-800 transition-all duration-300 text-white'>
-                  <p className='font-[600] text-[24px]'>Become a<br /> partner with us</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                  </svg>
 
-                </div>
-              </div>
             </div>
 
           </div>
@@ -128,7 +120,7 @@ export default function Footer() {
                 <div className='flex gap-2'>
                   <select
                     className='bg-inherit border-[1px] border-white w-[200px] rounded-2xl p-[10px]'
-                    value={`$  U.S. Dollars`}
+                    defaultValue={`$  U.S. Dollars`}
                   >
                     <option className="flex items-center gap-2 text-black rounded-md">$  U.S. Dollars  </option>
                     <option className="flex items-center gap-2 text-black rounded-md">$  U.S. Dollars  </option>
@@ -141,12 +133,12 @@ export default function Footer() {
 
                   >
                     {countries.map(({ name, flags }) => (
-                      <option key={name} value={name} className="flex items-center gap-2 text-black rounded-md">
-                        <img
+                      <option key={name} defaultValue={name} className="flex items-center gap-2 text-black rounded-md">
+                        {/* <img
                           src={flags.svg}
                           alt={name}
                           className="h-5 w-5 rounded-full object-cover"
-                        />
+                        /> */}
                         {name}
                       </option>
                     ))}

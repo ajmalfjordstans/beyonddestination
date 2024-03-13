@@ -23,8 +23,6 @@ export function Card(data) {
             <p className='font-[600] text-[18px]  text-black'>{data.data.destination}</p>
             <div className='flex justify-between'>
               <p className='text-[14px] text-black'>London Gatwick</p>
-              <p className='text-[14px] text-black'>starting from <span className='font-[600] text-[18px]'>$284</span></p>
-
             </div>
           </div>
         </div>

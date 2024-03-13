@@ -9,6 +9,7 @@ import Categories from './categories'
 import WineTasting from './wine-tasting'
 import TourGuide from './tour-guide'
 import Footer from '@/components/footer'
+import Blogs from './blogs'
 
 export default function Home() {
   // const user = useSelector((state) => state.user)
@@ -26,6 +27,7 @@ export default function Home() {
       <Packages />
       <Categories />
       <WineTasting />
+      <Blogs />
       <TourGuide />
       <Footer />
     </div>

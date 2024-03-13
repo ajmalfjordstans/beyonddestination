@@ -2,8 +2,9 @@
 
 import Image from 'next/image'
 import React from 'react'
-import { Button, Rating } from "@material-tailwind/react";
+import { Accordion, AccordionBody, Button, Rating } from "@material-tailwind/react";
 import Link from 'next/link';
+import RegisterGuide from './register-guide';
 
 
 
@@ -62,10 +63,13 @@ const guides = [
 export default function TourGuide() {
   return (
     <>
-      <div className='py-[30px]'>
-        <div className='container mx-auto  px-[5%] md:px-[10%]'>
-          <p className='font-[600] text-[28px]'>Tour Guides</p>
-          <p className='font-[400] text-[18px] text-[gray]'>Desc about our tour guides</p>
+
+      <div className='py-[30px] bg-primary text-white'>
+        <div className='container mx-auto py-[30px] px-[5%] md:px-[10%]'>
+          {/* <p className='font-[600] text-[28px]'>Tour Guides</p>
+          <p className='font-[400] text-[18px]'>Desc about our tour guides</p> */}
+          <RegisterGuide />
+         
         </div>
         <div className='mt-[40px] grid grid-cols-6'>
           {guides.map((guide, id) => {
@@ -112,25 +116,7 @@ export default function TourGuide() {
         </div>
 
       </div>
-      <div className='w-[70%] h-[350px] mx-auto rounded-md bg-third shadow-xl grid grid-cols-2 relative mb-[30px]'>
-        <div className='p-[30px] text-white'>
-          <p className='font-[500] text-[28px]'>Register as a <br /> Tour Guide with us</p>
-          <p className='font-[300] text-[16px] mt-[30px]'>Benefits of joining as a tour guide</p>
-          <Link
-            href='/tour-guide#register'
-          >
-            <Button
-              className='bg-[#70cad1] text-[#722F37] px-[10px] py-[3px] mt-[25px] rounded-md flex gap-2 items-center'
-            >Register Now
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#722F37" className="w-6 h-6">
-                <path fillRule="evenodd" d="M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06Z" clipRule="evenodd" />
-              </svg>
-            </Button>
-          </Link>
-        </div>
-        <div className='bg-guidebanner bg-cover'>
-        </div>
-      </div>
+
       {/* <div className='absolute h-[50%] w-full bg-[#FFA500]'></div> */}
     </>
   )

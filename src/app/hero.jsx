@@ -11,28 +11,23 @@ export default function Hero() {
         className='bg-landing-bg bg-bottom bg-cover bg-no-repeat h-full'
       >
         <div className='container mx-auto px-[5%] min-h-[90dvh] flex flex-col items-center py-[80px] '>
-          <div className='mt-[270px]'>
+          <div className='mt-[250px]'>
             <p className='font-[900] text-[54px] text-[#fbfcf8]'>Where do you want to <span className='text-white'>go?</span></p>
           </div>
-          <div className='flex gap-1 bg-white rounded-2xl p-[15px] mt-[20px]'>
-
-            <input type="text" id="destination" className='p-[10px] rounded-2xl border-[1px] focus:none' placeholder='Going To' />
-
-            <input type="text" id="fromLocation" className='p-[10px] rounded-2xl border-[1px] focus:none' placeholder='Departing From' />
-
-            <input type="date" id="departureDate" className='p-[10px] rounded-2xl border-[1px] focus:none' placeholder='When' />
-
-            <input type="text" id="tripDuration" className='p-[10px] rounded-2xl border-[1px] focus:none' placeholder='Duration' />
-
-            <input type="text" id="roomsAndGuests" className='p-[10px] rounded-2xl border-[1px] focus:none' placeholder='Rooms & Guests' />
-            <Button
-              className='bg-primary px-[10px]'
-            >Search</Button>
-          </div>
-
+          <form className="mx-auto mt-[30px]">
+            <div className="relative">
+              <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                </svg>
+              </div>
+              <input type="search" id="default-search" className="block w-[600px] p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-[50px] bg-gray-50 focus:ring-0 focus:border-primary focus:outline-none shadow-custom" placeholder="Places to go..." required />
+              <button type="submit" className="text-white absolute end-2.5 bottom-2.5 bg-primary hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-[50px] text-sm px-4 py-2 ">Search</button>
+            </div>
+          </form>
         </div>
       </div>
-      <div className='container mx-auto px-[5%] '>
+      {/* <div className='container mx-auto px-[5%] '>
         <div
           className='bg-hero-bg bg-cover bg-no-repeat bg-bottom rounded-[20px] mt-[40px] w-[70%] h-[500px] flex items-end mx-auto'
         >
@@ -49,7 +44,7 @@ export default function Hero() {
             </Button>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   )
 }
