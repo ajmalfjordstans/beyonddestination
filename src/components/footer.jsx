@@ -5,6 +5,7 @@ import Image from 'next/image'
 import React from 'react'
 import { useCountries } from "use-react-countries";
 import { Select, Option } from "@material-tailwind/react";
+import Link from 'next/link';
 
 export default function Footer() {
   const { countries } = useCountries();
@@ -15,17 +16,20 @@ export default function Footer() {
           <div>
             <div className='flex justify-around pr-[3%] pb-[25px] font-[300]'>
               <div className='flex flex-col gap-2'>
-                <Image src='/images/logo_3.jpeg' height={600} width={600} alt='logo' className='h-[215px] w-[240px] mx-auto' />
+                <Image src='/images/logo_2.png' height={600} width={600} alt='logo' className='h-[80px] w-[70px] mx-auto' />
                 <p>Address</p>
                 <p>Mail</p>
                 <p>Phone Numbers</p>
-                <div className='bg-black rounded-2xl h-[110px] w-[300px] my-[20px] p-[15px] hover:cursor-pointer flex justify-between items-center gap-4 hover:bg-gray-800 transition-all duration-300 text-white'>
-                  <p className='font-[600] text-[24px]'>Become a<br /> partner with us</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                  </svg>
-
-                </div>
+                <Link
+                  href="/partner"
+                >
+                  <div className='bg-black rounded-2xl h-[110px] w-[300px] my-[20px] p-[15px] hover:cursor-pointer flex justify-between items-center gap-4 hover:bg-gray-800 transition-all duration-300 text-white'>
+                    <p className='font-[600] text-[24px]'>Become a<br /> partner with us</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
+                  </div>
+                </Link>
               </div>
               <div className='flex flex-col gap-2'>
                 <p className='font-[500] mb-[15px]'>TOP DESTINATIONS</p>
