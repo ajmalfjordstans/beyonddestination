@@ -3,7 +3,7 @@
 import { Button } from '@material-tailwind/react'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-import RegisterForm from './register-form'
+import RegisterForm from '../../components/forms/register-form'
 
 export default function Register() {
   const [showForm, setShowForm] = useState(false)

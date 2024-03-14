@@ -165,33 +165,36 @@ export function BlogsList({ currentBlog, setCurrentBlog }) {
 export default function Blogs() {
   const [currentBlog, setCurrentBlog] = useState(BlogData[0])
   return (
-    <div className='container mx-auto px-[5%] py-[30px] grid grid-cols-3 gap-3 mt-[30px]'>
-      <div
-        className='col-span-2 h-[600px] '
-      >
+    <div className='container mx-auto px-[5%] py-[30px] mt-[30px]'>
+      <p className='font-[600] text-[42px] text-left'>Blogs</p>
+      <div className='grid grid-cols-3 gap-3 mt-[30px]'>
         <div
-          className='h-full rounded-lg relative overflow-hidden'
-          style={{
-            backgroundImage: `url(${currentBlog.img})`,
-            backgroundSize: 'cover', // Optional: Adjust the background size
-            backgroundPosition: 'center', // Optional: Adjust the background position
-            backgroundRepeat: 'no-repeat', // Optional: Prevent background image from repeating
-          }}
+          className='col-span-2 h-[600px] '
         >
-          <div className="absolute inset-0 flex items-end text-white"
-            style={{ background: `linear-gradient(0deg, rgba(0,0,0,0.8324579831932774) 0%, rgba(255,255,255,0) 59%)` }}
+          <div
+            className='h-full rounded-lg relative overflow-hidden'
+            style={{
+              backgroundImage: `url(${currentBlog.img})`,
+              backgroundSize: 'cover', // Optional: Adjust the background size
+              backgroundPosition: 'center', // Optional: Adjust the background position
+              backgroundRepeat: 'no-repeat', // Optional: Prevent background image from repeating
+            }}
           >
-            <div className='p-[20px] w-[60%] z-[2] flex flex-col gap-2'>
-              <p className='font-[600] text-[14px] uppercase'>{currentBlog.category}</p>
-              <p className='font-[600] text-[22px] tracking-wide'>{currentBlog.title}</p>
-              <p className='font-[500] text-[14px] '>{currentBlog.date}</p>
-              <p className='text-[14px]'>{currentBlog.desc}</p>
+            <div className="absolute inset-0 flex items-end text-white"
+              style={{ background: `linear-gradient(0deg, rgba(0,0,0,0.8324579831932774) 0%, rgba(255,255,255,0) 59%)` }}
+            >
+              <div className='p-[20px] w-[60%] z-[2] flex flex-col gap-2'>
+                <p className='font-[600] text-[14px] uppercase'>{currentBlog.category}</p>
+                <p className='font-[600] text-[22px] tracking-wide'>{currentBlog.title}</p>
+                <p className='font-[500] text-[14px] '>{currentBlog.date}</p>
+                <p className='text-[14px]'>{currentBlog.desc}</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div>
-        <BlogsList currentBlog={currentBlog} setCurrentBlog={setCurrentBlog} />
+        <div>
+          <BlogsList currentBlog={currentBlog} setCurrentBlog={setCurrentBlog} />
+        </div>
       </div>
     </div>
   )

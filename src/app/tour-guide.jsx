@@ -4,7 +4,7 @@ import Image from 'next/image'
 import React from 'react'
 import { Accordion, AccordionBody, Button, Rating } from "@material-tailwind/react";
 import Link from 'next/link';
-import RegisterGuide from './register-guide';
+import RegisterGuide from '../components/register-guide';
 
 
 
@@ -110,7 +110,7 @@ export default function TourGuide() {
             href='/tour-guide'
           >
             <Button
-              className='bg-primary px-[10px] py-[5px] rounded-md font-lato mt-[10px]'
+              className='bg-white text-primary font-[500] px-[10px] py-[5px] rounded-md capitalize mt-[10px]'
             >View More Guides</Button>
           </Link>
         </div>

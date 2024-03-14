@@ -20,11 +20,12 @@ export default function RegisterForm({ setShowForm }) {
     setTimeout(() => {
       alert(JSON.stringify(values, null, 2));
       setSubmitting(false);
+      setShowForm(false)
     }, 400);
   };
   return (
-    <div className='fixed h-[100vh] w-[100vw] top-0 backdrop-blur-md flex justify-center items-center'>
-      <div className='bg-white rounded-3xl p-[20px] max-w-[600px] w-full shadow-lg'>
+    <div className='fixed h-[100vh] w-[100vw] top-0 left-0 backdrop-blur-md flex justify-center items-center z-[100]'>
+      <div className='bg-white rounded-3xl p-[20px] max-w-[600px] w-full shadow-lg text-black'>
         <div className=" mx-auto">
           <div className='flex justify-between'>
             <h2 className="text-2xl font-bold mb-4">Tour Guide Registration</h2>
@@ -55,7 +56,7 @@ export default function RegisterForm({ setShowForm }) {
                       className="input border-[1px] w-full p-[3px]"
                       placeholder="Enter your first name"
                     />
-                    <ErrorMessage name="firstName" component="div" className="text-red-500" />
+                    <ErrorMessage name="firstName" component="div" className="text-red-500 text-[14px]" />
                   </div>
                   <div className='w-full'>
                     <label htmlFor="lastName" className="block font-semibold">Last Name</label>
@@ -65,7 +66,7 @@ export default function RegisterForm({ setShowForm }) {
                       className="input border-[1px] w-full p-[3px]"
                       placeholder="Enter your last name"
                     />
-                    <ErrorMessage name="lastName" component="div" className="text-red-500" />
+                    <ErrorMessage name="lastName" component="div" className="text-red-500 text-[14px]" />
                   </div>
                 </div>
                 <div className='flex gap-3'>
@@ -77,7 +78,7 @@ export default function RegisterForm({ setShowForm }) {
                       className="input border-[1px] w-full p-[3px]"
                       placeholder="Enter your email"
                     />
-                    <ErrorMessage name="email" component="div" className="text-red-500" />
+                    <ErrorMessage name="email" component="div" className="text-red-500 text-[14px]" />
                   </div>
                   <div className='w-full'>
                     <label htmlFor="phone" className="block font-semibold">Phone</label>
@@ -87,7 +88,7 @@ export default function RegisterForm({ setShowForm }) {
                       className="input border-[1px] w-full p-[3px]"
                       placeholder="Enter your phone number"
                     />
-                    <ErrorMessage name="phone" component="div" className="text-red-500" />
+                    <ErrorMessage name="phone" component="div" className="text-red-500 text-[14px]" />
                   </div>
                 </div>
                 <button
