@@ -26,15 +26,14 @@ export function Card({ img, description, destination }) {
 
 export default function WineTasting() {
   return (
-    <div className='bg-[black] text-[#FFA500] h-[600px] bg-winebanner bg-cover pt-[30px]'>
-      <div className='container mx-auto py-[80px] px-[5%] md:px-[10%] z-10 text-white grid grid-cols-2 '>
-        <div></div>
-        <div>
-          <p className='font-[500] text-[32px] text-center'>Fancy Wine Tours</p>
-          <p className='font-[400] text-[18px] text-[gray] text-center mt-[15px]'>Desc about our Wine Tasting </p>
+    <div className='bg-winebanner bg-cover h-[100vh] py-[30px]'>
+      <div className='container mx-auto py-[80px] px-[5%] md:px-[10%] h-full z-10 text-black grid grid-cols-2 '>
+        <div className='flex flex-col h-full justify-center'>
+          <p className='font-[600] text-[42px] text-left'>Fancy Wine Tours</p>
+          <p className='font-[400] text-[18px] text-[gray] text-left mt-[15px]'>Desc about our Wine Tasting </p>
 
           <div className='mt-[50px]'>
-            <p className='font-[500] text-[32px] mb-[20px]'>Explore wine tasting tours in </p>
+            <p className='font-[600] text-[26px] mb-[20px]'>Explore wine tasting tours in </p>
             <div className='flex items-center gap-2 hover:cursor-pointer hover:pl-[30px] transition-all duration-100 mb-[15px]'>
               <p className=''>India
               </p>
@@ -59,6 +58,7 @@ export default function WineTasting() {
             </Button>
           </div>
         </div>
+        <div className=''></div>
       </div>
     </div>
   )
