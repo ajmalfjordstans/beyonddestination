@@ -114,21 +114,26 @@ const guides = [
 
 export default function Guides() {
   return (
-    <div className='container mx-auto px-[5%] md:px-[10%]'>
-      <div className='py-[30px]'>
-        <div className=''>
-          <p className='font-[500] text-[28px]'>Tour Guides</p>
-          <p className='font-[400] text-[18px] text-[gray]'>Desc about our tour guides</p>
-        </div>
-        <div className='mt-[40px] grid grid-cols-4 gap-10'>
-          {guides.map((guide, id) => {
-            return (
-              <Card data={guide} key={id} />
-            )
-          })}
-        </div>
+    <>
+     
+      <div className='container mx-auto px-[5%] md:px-[10%]'>
+        <div className='py-[30px]'>
+          <div className=''>
+            <p className='font-[500] text-[28px]'>Tour Guides</p>
+            <p className='font-[400] text-[18px] text-[gray]'>Desc about our tour guides</p>
+          </div>
 
+
+          <div className='mt-[40px] grid grid-cols-4 gap-10'>
+            {guides.map((guide, id) => {
+              return (
+                <Card data={guide} key={id} />
+              )
+            })}
+          </div>
+
+        </div>
       </div>
-    </div>
+    </>
   )
 }

@@ -3,6 +3,34 @@ body {
   padding: 0
 }
 
+.item:nth-child(1n) {
+  height: 100px;
+}
+
+.item:nth-child(2n) {
+  background: red;
+  grid-column: span 2;
+  height: 300px;
+}
+
+.item:nth-child(3n) {
+  background: green;
+  grid-column: span 3;
+  height: 400px;
+}
+
+.item:nth-child(5n) {
+  background: red;
+  grid-column: span 1;
+  height: 400px;
+}
+
+.item:nth-child(7n) {
+  background: red;
+  grid-column: span 1;
+  height: 100px;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import React from 'react'
 import { Accordion, AccordionBody, Button, Rating } from "@material-tailwind/react";
 import Link from 'next/link';
-import RegisterGuide from '../components/register-guide';
+import RegisterGuide from '../components/guide/register-guide';
 
 
 
@@ -63,7 +63,6 @@ const guides = [
 export default function TourGuide() {
   return (
     <>
-
       <div className='py-[30px] bg-primary text-white'>
         <div className='container mx-auto py-[30px] px-[5%] md:px-[10%]'>
           {/* <p className='font-[600] text-[28px]'>Tour Guides</p>

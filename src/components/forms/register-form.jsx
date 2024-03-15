@@ -24,7 +24,7 @@ export default function RegisterForm({ setShowForm }) {
     }, 400);
   };
   return (
-    <div className='fixed h-[100vh] w-[100vw] top-0 left-0 backdrop-blur-md flex justify-center items-center z-[100]'>
+    <div className='fixed h-[100vh] w-[100vw] top-0 left-0 backdrop-blur-sm flex justify-center items-center z-[100]'>
       <div className='bg-white rounded-3xl p-[20px] max-w-[600px] w-full shadow-lg text-black'>
         <div className=" mx-auto">
           <div className='flex justify-between'>
